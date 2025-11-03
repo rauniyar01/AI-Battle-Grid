@@ -15,7 +15,7 @@ random.seed(42)
 np.random.seed(42)
 
 
-def run_single_match(agent_objs, agent_names, grid=12, turns=120, food=6, spawn=0.3, seed=None):
+def run_single_match(agent_objs, agent_names, grid=12, turns=120, food=10, spawn=0.4, seed=None):
     """Run one game and return final scores."""
     arena = BattleArena(
         grid_size=grid,
@@ -98,4 +98,4 @@ def run_tournament(
 
 if __name__ == "__main__":
     # Example: run 10 matches with default settings
-    run_tournament(rounds=10)
+    run_tournament(rounds=10, grid=20, turns=200, food=6, spawn=0.4)

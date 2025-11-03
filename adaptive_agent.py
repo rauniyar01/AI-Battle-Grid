@@ -301,6 +301,7 @@ class Agent:
         danger: Set[Tuple[int, int]],
         grid_size: int,
     ) -> Optional[str]:
+        best_move: Optional[str] = None
         best_dist = self._manhattan(start, target)
         fallback_move: Optional[str] = None
 
